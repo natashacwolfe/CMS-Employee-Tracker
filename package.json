@@ -1,0 +1,26 @@
+{
+  "name": "cms-employee-tracker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Database.js",
+  "dependencies": {
+    "console.table": "^0.10.0",
+    "express": "^4.17.1",
+    "inquirer": "^7.0.5",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node cms.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/natashacwolfe/CMS-Employee-Tracker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/natashacwolfe/CMS-Employee-Tracker/issues"
+  },
+  "homepage": "https://github.com/natashacwolfe/CMS-Employee-Tracker#readme"
+}

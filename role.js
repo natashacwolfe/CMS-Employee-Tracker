@@ -1,3 +1,8 @@
+const db = require('./database');
+const nextQuestion = require('./cms');
+var cTable = require('console.table');
+
+
 class Role {
     constructor (title, salary, department_fk){
         this.title = title, 
@@ -9,4 +14,4 @@ class Role {
 
 };
 
-module.exports = Role;
+module.exports = new Role();
