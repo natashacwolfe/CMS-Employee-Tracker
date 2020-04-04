@@ -3,7 +3,7 @@ var inquirer = require('inquirer');
 var cTable = require('console.table');
 
 // classes 
-const db = require('./database');
+const db = require('./db/Database');
 var role = require('./role');
 var employee = require('./employee');
 var deparment = require('./department');
@@ -134,13 +134,13 @@ async function updateEmpRole() {
                                             message: 'What is the employee\'s new role?',
                                             choices: roleArr
                                         }).then(function (roleID) {
-                                            console.log(empID.id, roleID.role_ID)
+                                            console.log("Employee role has been updated!")
                                             let query = 'UPDATE employee SET role_FK = ? WHERE employee_ID = ?';
                                             let data = [roleID.role_ID, empID.id]
                                             conn.query(
                                                 query, data, function (err, results) {
-                                                    if (err) throw err;
                                                     console.log("Employee role has been updated!");
+                                                    if (err) throw err;
                                                 });
                                             nextQuestion();
                                         })
